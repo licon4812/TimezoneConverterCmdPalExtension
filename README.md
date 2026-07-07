@@ -1,6 +1,6 @@
-# Time Zone ConvertorCmdPalExtension
+# Time Zone ConverterCmdPalExtension
 
-Time Zone Convertor CmdPalExtension is an extension for the PowerToys Command Palette that allows users to quickly convert time between different time zones.
+Time Zone Converter CmdPalExtension is an extension for the PowerToys Command Palette that allows users to quickly convert time between different time zones.
 
 ## Features
 
@@ -34,7 +34,7 @@ Coming soon
 ## Usage
 
 1. Open the PowerToys Command Palette.
-2. Search for Time Zone Convertor using the extension.
+2. Search for Time Zone Converter using the extension.
 
 ### Show time zones
 
