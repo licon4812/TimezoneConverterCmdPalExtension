@@ -5,18 +5,18 @@
 using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
 
-namespace TimezoneConvertorCmdPalExtension;
+namespace TimezoneConverterCmdPalExtension;
 
-public partial class TimezoneConvertorCmdPalExtensionCommandsProvider : CommandProvider
+public partial class TimezoneConverterCmdPalExtensionCommandsProvider : CommandProvider
 {
     private readonly ICommandItem[] _commands;
 
-    public TimezoneConvertorCmdPalExtensionCommandsProvider()
+    public TimezoneConverterCmdPalExtensionCommandsProvider()
     {
         DisplayName = "Time Zone Converter";
         Icon = new IconInfo("\uE775");
         _commands = [
-            new CommandItem(new Pages.TimezoneConvertorCmdPalExtensionPage()) { Title = DisplayName },
+            new CommandItem(new global::TimezoneConverterCmdPalExtension.Pages.TimezoneConverterCmdPalExtensionPage()) { Title = DisplayName },
         ];
     }
 

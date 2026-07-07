@@ -8,20 +8,20 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+using Windows.ApplicationModel;
 using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
-using Windows.ApplicationModel;
 
-namespace TimezoneConvertorCmdPalExtension.Pages;
+namespace TimezoneConverterCmdPalExtension.Pages;
 
-internal sealed partial class TimezoneConvertorCmdPalExtensionPage : DynamicListPage, IDisposable
+internal sealed partial class TimezoneConverterCmdPalExtensionPage : DynamicListPage, IDisposable
 {
     private bool _isError;
     private readonly CancellationTokenSource _cancellationTokenSource = new();
     private readonly BufferBlock<string> _searchTextBuffer = new();
     private IReadOnlyList<ListItem> _results = GetAllTimeZonesWithLocalOnTop(DateTime.UtcNow);
 
-    public TimezoneConvertorCmdPalExtensionPage()
+    public TimezoneConverterCmdPalExtensionPage()
     {
 
         // Retrieve the app version
@@ -29,7 +29,7 @@ internal sealed partial class TimezoneConvertorCmdPalExtensionPage : DynamicList
         var appVersion = $"{version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
 
         Icon = new IconInfo("\uE775");
-        Title = $"Timezone Convertor - v{appVersion}";
+        Title = $"Timezone Converter - v{appVersion}";
         Name = "Convert";
 
         // Configure the search processing pipeline
