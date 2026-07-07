@@ -1,10 +1,10 @@
 {
   "profiles": {
-    "TimezoneConvertorCmdPalExtension (Package)": {
+    "TimezoneConverterCmdPalExtension (Package)": {
       "commandName": "MsixPackage",
       "doNotLaunchApp": true
     },
-    "TimezoneConvertorCmdPalExtension (Unpackaged)": {
+    "TimezoneConverterCmdPalExtension (Unpackaged)": {
       "commandName": "Project"
     }
   }
