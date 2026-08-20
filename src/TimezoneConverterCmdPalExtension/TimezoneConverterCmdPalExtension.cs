@@ -7,16 +7,16 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Microsoft.CommandPalette.Extensions;
 
-namespace TimezoneConvertorCmdPalExtension;
+namespace TimezoneConverterCmdPalExtension;
 
 [Guid("49828c37-3927-4ee4-a54e-1deb81c29cb0")]
-public sealed partial class TimezoneConvertorCmdPalExtension : IExtension, IDisposable
+public sealed partial class TimezoneConverterCmdPalExtension : IExtension, IDisposable
 {
     private readonly ManualResetEvent _extensionDisposedEvent;
 
-    private readonly TimezoneConvertorCmdPalExtensionCommandsProvider _provider = new();
+    private readonly TimezoneConverterCmdPalExtensionCommandsProvider _provider = new();
 
-    public TimezoneConvertorCmdPalExtension(ManualResetEvent extensionDisposedEvent)
+    public TimezoneConverterCmdPalExtension(ManualResetEvent extensionDisposedEvent)
     {
         this._extensionDisposedEvent = extensionDisposedEvent;
     }
