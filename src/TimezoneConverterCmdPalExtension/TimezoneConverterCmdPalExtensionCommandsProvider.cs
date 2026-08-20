@@ -10,14 +10,16 @@ namespace TimezoneConverterCmdPalExtension;
 public partial class TimezoneConverterCmdPalExtensionCommandsProvider : CommandProvider
 {
     private readonly ICommandItem[] _commands;
+    private readonly ICommandItem _dockBand;
 
     public TimezoneConverterCmdPalExtensionCommandsProvider()
     {
         DisplayName = "Time Zone Converter";
         Icon = new IconInfo("\uE775");
         _commands = [
-            new CommandItem(new global::TimezoneConverterCmdPalExtension.Pages.TimezoneConverterCmdPalExtensionPage()) { Title = DisplayName },
+            new CommandItem(new Pages.TimezoneConverterCmdPalExtensionPage()) { Title = DisplayName },
         ];
+        _dockBand = new WrappedDockItem(new Pages.TimezoneConverterCmdPalExtensionPage{Name = string.Empty}, DisplayName);
     }
 
     public override ICommandItem[] TopLevelCommands()
@@ -25,4 +27,8 @@ public partial class TimezoneConverterCmdPalExtensionCommandsProvider : CommandP
         return _commands;
     }
 
+    public override ICommandItem[]? GetDockBands()
+    {
+        return [_dockBand];
+    }
 }
