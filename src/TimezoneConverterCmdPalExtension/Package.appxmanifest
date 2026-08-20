@@ -47,7 +47,7 @@
       <Extensions>
         <com:Extension Category="windows.comServer">
           <com:ComServer>
-            <com:ExeServer Executable="TimezoneConvertorCmdPalExtension.exe" Arguments="-RegisterProcessAsComServer" DisplayName="Time zone Convertor for Command Palette">
+            <com:ExeServer Executable="TimezoneConverterCmdPalExtension.exe" Arguments="-RegisterProcessAsComServer" DisplayName="Time zone Convertor for Command Palette">
               <com:Class Id="49828c37-3927-4ee4-a54e-1deb81c29cb0" DisplayName="Time zone Convertor for Command Palette" />
             </com:ExeServer>
           </com:ComServer>
